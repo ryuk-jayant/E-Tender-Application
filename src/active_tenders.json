@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "title": "Construction of New Office Building",
+      "description": "We are seeking bids for the construction of a new office building in downtown area.",
+      "deadline": "2024-06-20",
+      "category": "Construction"
+    },
+    {
+      "id": 2,
+      "title": "Supply of IT Equipment",
+      "description": "We are seeking bids for the supply of IT equipment for our new office building.",
+      "deadline": "2024-06-25",
+      "category": "IT"
+    },
+    {
+      "id": 3,
+      "title": "Security Services",
+      "description": "We are seeking bids for security services for our office building.",
+      "deadline": "2024-06-30",
+      "category": "Security"
+    },
+    {
+      "id": 4,
+      "title": "Catering Services",
+      "description": "We are seeking bids for catering services for our office building.",
+      "deadline": "2024-07-05",
+      "category": "Catering"
+    },
+    {
+      "id": 5,
+      "title": "Landscaping Services",
+      "description": "We are seeking bids for landscaping services for our office building.",
+      "deadline": "2024-07-10",
+      "category": "Landscaping"
+    }
+  ]
