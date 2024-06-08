@@ -1,0 +1,1 @@
+export const BASE_URL = "https://0f0cb2f2-fad9-486c-804f-52211389d5d1-00-3hhwi6jtnz8iu.kirk.replit.dev/";

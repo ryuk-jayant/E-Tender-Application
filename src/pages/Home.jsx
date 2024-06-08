@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import active_tenders from '../active_tenders.json';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BASE_URL } from '../backend';
 
 export default function Home() {
-    
+  const [tenders, setTenders] = useState([]);
+
+  useEffect(() => {
+    fetch('https://065fc8c5-9bf1-407d-a451-e7f70268dcbf-00-1ph04tsuewwgg.kirk.replit.dev/BID/TenderList')
+      .then(response => response.json())
+      .then(data => setTenders(data));
+  }, []);
+
+  // console.log(tenders);
     const renderTenderCards = () => {
-        return active_tenders.map(tender => (
+        return tenders.map(tender => (
           <div key={tender.id} className="bg-white shadow-md rounded px-4 py-4 mb-4 flex flex-col gap-2">
             <h5 className="text-lg font-bold">{tender.title}</h5>
             <p className="text-gray-600">{tender.description}</p>
