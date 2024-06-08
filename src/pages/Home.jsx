@@ -10,7 +10,7 @@ export default function Home() {
             <h5 className="text-lg font-bold">{tender.title}</h5>
             <p className="text-gray-600">{tender.description}</p>
             <p className="text-gray-900">Deadline: {tender.deadline}</p>
-            <Link to={`/tender/${tender.id}`} class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-auto">View More</Link>
+            <Link to={`/tender/${tender.id}`} className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-auto">View More</Link>
           </div>
         ));
       };
