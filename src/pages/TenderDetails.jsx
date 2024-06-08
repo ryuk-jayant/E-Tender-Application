@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import active_tenders from '../active_tenders.json';
 
 export default function TenderDetails() {
     const { id } = useParams();
     // console.log(id);
-    const tender = active_tenders.find((tender) => tender.id === parseInt(id));
-  
+    // const tender = active_tenders.find((tender) => tender.id === parseInt(id));
+    const [tender, setTender] = useState([]);
+
+    useEffect(() => {
+      fetch(`https://065fc8c5-9bf1-407d-a451-e7f70268dcbf-00-1ph04tsuewwgg.kirk.replit.dev/BID/Tender/${id}`)
+        .then(response => response.json())
+        .then(data => setTender(data[0]));
+    }, []);
+
     if (!tender) {
       return <div>Tender not found</div>;
     }
+    // console.log(tender);
   
     return (
       <div className="p-8">
