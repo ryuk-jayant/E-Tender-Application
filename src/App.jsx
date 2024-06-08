@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Admin from "./pages/Admin";
 import TenderDetails from "./pages/TenderDetails";
 import BidForm from "./pages/BidForm";
+import AppliedTenders from "./pages/AppliedTenders";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/admin" element={<Admin />}/>
         <Route path="/tender/:id" element={<TenderDetails />} />
         <Route path="/bidform/:id" element={<BidForm />} />
+        <Route path="/applied-tenders" element={<AppliedTenders />} />
       </Routes>
     </BrowserRouter>
   );

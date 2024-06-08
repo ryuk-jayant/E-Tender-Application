@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "tenderId": 1,
+      "bidAmount": 1000,
+      "bidDescription": "This is a sample bid description"
+    },
+    {
+      "id": 2,
+      "tenderId": 2,
+      "bidAmount": 2000,
+      "bidDescription": "This is another sample bid description"
+    },
+    {
+      "id": 3,
+      "tenderId": 3,
+      "bidAmount": 3000,
+      "bidDescription": "This is yet another sample bid description"
+    }
+  ]

@@ -11,7 +11,27 @@ export default function BidForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Call API to submit bid
+    // // Call API to submit bid with token
+    // fetch('/api/submit-bid', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //     body: JSON.stringify({
+    //       tenderId: id,
+    //       bidAmount,
+    //       bidDescription,
+    //     }),
+    // })
+    // .then((response) => response.json())
+    // .then((data) => {
+    //   // Redirect to AppliedTenders page with token
+    //   history.push(`/findmytender/${token}`);
+    // })
+    // .catch((error) => console.error(error));
+
+
     console.log(`Bid submitted: ${bidAmount} - ${bidDescription}`);
   };
 
