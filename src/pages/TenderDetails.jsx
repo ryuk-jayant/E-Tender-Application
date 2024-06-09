@@ -25,7 +25,7 @@ export default function TenderDetails() {
       <p className="text-lg mb-4">{tender.description}</p>
       <p className="text-lg mb-4">Category: {tender.category}</p>
       <p className="text-lg mb-6">Deadline: {tender.deadline}</p>
-      <Link to={`/bidform/${tender.id}`} target='_blank' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded">
+      <Link to={`/bidform/${tender._id}`} target='_blank' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded">
         Apply Now
       </Link>
     </div>
