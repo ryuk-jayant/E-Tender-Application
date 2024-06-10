@@ -5,7 +5,7 @@ import { BASE_URL } from '../backend';
 export default function Home() {
   const [tenders, setTenders] = useState([]);
 
-  useEffect(() => {
+  useEffect( () => {
     fetch('https://065fc8c5-9bf1-407d-a451-e7f70268dcbf-00-1ph04tsuewwgg.kirk.replit.dev/BID/TenderList')
     // fetch('https://0f0cb2f2-fad9-486c-804f-52211389d5d1-00-3hhwi6jtnz8iu.kirk.replit.dev/api/tenders')
     // fetch(`${BASE_URL}/api/tenders`)
