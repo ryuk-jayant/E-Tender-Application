@@ -23,7 +23,7 @@ export default function Header() {
                 <Link to='/applied-tenders'>
                     <li className="hidden sm:inline text-slate-700 hover:underline">Applied-Tenders</li>
                 </Link>
-                <Link to='/admin'>
+                <Link to='/admin-login'>
                     <li className="hidden sm:inline text-slate-700 hover:underline">Admin</li>
                 </Link>
             </ul>
