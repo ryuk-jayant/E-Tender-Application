@@ -53,11 +53,16 @@ const AppliedTenders = () => {
 
       <div className="rounded px-4 py-4 mb-4 flex flex-col gap-2">
         {appliedTenders.map((tender) => (
-          <div key={tender[0]._id} className="border p-4 rounded shadow-md bg-white max-w-xl">
-            <h3 className="text-lg font-semibold mb-2">{tender[0].title}</h3>
-            <p className="text-gray-700 mb-2">{tender[0].description}</p>
-            <p className="text-gray-500"><span>Category : </span>{tender[0].category}</p>
+          <div key={tender[0]._id} className="bg-white shadow-md rounded px-4 py-4 mb-4 flex flex-col gap-2">
+          <div className="flex justify-between">          
+            <h5 className="text-lg font-bold">Company Name : {tender[0].companyName}</h5>
+            <img src={tender[0].companyLogo} alt={tender[0].companyName} className="w-12 h-12 rounded-full object-cover" />
           </div>
+          <p className="text-gray-600">Description : {tender[0].tenderDescription}</p>
+          <p className="text-gray-600">Item : {tender[0].item}</p>
+          <p className="text-gray-900">Tender Open Date : {tender[0].tenderOpenDate}</p>
+          <p className="text-gray-900">Tender Closing Date : {tender[0].tenderClosingDate}</p>
+        </div>
         ))}
       </div>
     </div>
