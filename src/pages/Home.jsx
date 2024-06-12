@@ -12,13 +12,13 @@ export default function Home() {
   useEffect(() => {
     fetch('https://065fc8c5-9bf1-407d-a451-e7f70268dcbf-00-1ph04tsuewwgg.kirk.replit.dev/BID/TenderList')
       .then(response => response.json())
-      .then(data => setTenders(data));
+      .then(data => {setTenders(data)});
   }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
     const keywordArray = searchQuery.split(" ");
-    const filterColumns = ["title", "description", "category"];
+    const filterColumns = ["companyName", "address", "tenderDescription", "category", "item"];
     const results = search(tenders, keywordArray, filterColumns);
     setSearchResults(results);
   };
@@ -27,18 +27,28 @@ export default function Home() {
     if (searchResults.length > 0) {
       return searchResults.map(tender => (
         <div key={tender._id} className="bg-white shadow-md rounded px-4 py-4 mb-4 flex flex-col gap-2">
-          <h5 className="text-lg font-bold">{tender.title}</h5>
-          <p className="text-gray-600">{tender.description}</p>
-          <p className="text-gray-900">Deadline: {tender.deadline}</p>
+          <div className="flex justify-between">          
+            <h5 className="text-lg font-bold">Company Name : {tender.companyName}</h5>
+            <img src={tender.companyLogo} alt={tender.companyName} className="w-12 h-12 rounded-full object-cover" />
+          </div>
+          <p className="text-gray-600">Description : {tender.tenderDescription}</p>
+          <p className="text-gray-600">Item : {tender.item}</p>
+          <p className="text-gray-900">Tender Open Date : {tender.tenderOpenDate}</p>
+          <p className="text-gray-900">Tender Closing Date : {tender.tenderClosingDate}</p>
           <Link to={`/tender/${tender._id}`} className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-auto">View More</Link>
         </div>
       ));
     } else {
       return tenders.map(tender => (
         <div key={tender._id} className="bg-white shadow-md rounded px-4 py-4 mb-4 flex flex-col gap-2">
-          <h5 className="text-lg font-bold">{tender.title}</h5>
-          <p className="text-gray-600">{tender.description}</p>
-          <p className="text-gray-900">Deadline: {tender.deadline}</p>
+          <div className="flex justify-between">          
+            <h5 className="text-lg font-bold">Company Name : {tender.companyName}</h5>
+            <img src={tender.companyLogo} alt={tender.companyName} className="w-12 h-12 rounded-full object-cover" />
+          </div>
+          <p className="text-gray-600">Description : {tender.tenderDescription}</p>
+          <p className="text-gray-600">Item : {tender.item}</p>
+          <p className="text-gray-900">Tender Open Date : {tender.tenderOpenDate}</p>
+          <p className="text-gray-900">Tender Closing Date : {tender.tenderClosingDate}</p>
           <Link to={`/tender/${tender._id}`} className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-auto">View More</Link>
         </div>
       ));
