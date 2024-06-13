@@ -1,9 +1,7 @@
 import React, { useEffect, useState , } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../backend';
-import search from '../SearchByKeyword';
 import {FaSearch} from "react-icons/fa";
-import active_tenders from "../active_tenders.json"
 
 
 
