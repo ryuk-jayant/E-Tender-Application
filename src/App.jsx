@@ -6,6 +6,8 @@ import BidForm from "./pages/BidForm";
 import AppliedTenders from "./pages/AppliedTenders";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import CreateTender from "./pages/CreateTender";
+import AppliedBids from "./pages/AppliedBids";
 
 export default function App() {
   return (
@@ -18,6 +20,9 @@ export default function App() {
         <Route path="/tender/:id" element={<TenderDetails />} />
         <Route path="/bidform/:id" element={<BidForm />} />
         <Route path="/applied-tenders" element={<AppliedTenders />} />
+        <Route path="/create-tender" element={<CreateTender />} />
+        <Route path="/applied-bids/:id" element={<AppliedBids />} />
+
       </Routes>
     </BrowserRouter>
   );
