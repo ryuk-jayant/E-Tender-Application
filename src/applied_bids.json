@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "tenderId": 1,
+      "bidderName": "John Doe",
+      "bidderCompany": "Doe Construction",
+      "bidAmount": 100000,
+      "bidDate": "2022-01-01T12:00:00.000Z",
+      "status": "pending",
+      "documents": [
+        {
+          "id": 1,
+          "name": "Bid Document",
+          "url": "https://example.com/bid-document.pdf"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tenderId": 2,
+      "bidderName": "Jane Smith",
+      "bidderCompany": "Smith Builders",
+      "bidAmount": 95000,
+      "bidDate": "2022-01-02T14:00:00.000Z",
+      "status": "pending",
+      "documents": [
+        {
+          "id": 2,
+          "name": "Bid Document",
+          "url": "https://example.com/bid-document-2.pdf"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tenderId": 1,
+      "bidderName": "Bob Johnson",
+      "bidderCompany": "Johnson Engineering",
+      "bidAmount": 120000,
+      "bidDate": "2022-01-03T10:00:00.000Z",
+      "status": "rejected",
+      "documents": [
+        {
+          "id": 3,
+          "name": "Bid Document",
+          "url": "https://example.com/bid-document-3.pdf"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tenderId": 1,
+      "bidderName": "Alice Brown",
+      "bidderCompany": "Brown Contractors",
+      "bidAmount": 110000,
+      "bidDate": "2022-01-04T16:00:00.000Z",
+      "status": "approved",
+      "documents": [
+        {
+          "id": 4,
+          "name": "Bid Document",
+          "url": "https://example.com/bid-document-4.pdf"
+        }
+      ]
+    }
+  ]
